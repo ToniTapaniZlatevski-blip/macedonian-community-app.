@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Macedonian Community of Australia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header {
+      background: #b5121b;
+      color: white;
+      text-align: center;
+      padding: 24px 16px;
+    }
+    header h1 { margin: 0 0 8px; font-size: 25px; }
+    header p { margin: 0; }
+    main { padding: 16px; }
+    h2 { color: #b5121b; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .item {
+      background: white;
+      padding: 18px 10px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 5px #ddd;
+    }
+    .item span { display: block; font-size: 28px; margin-bottom: 8px; }
+    .item strong { font-size: 15px; }
+    #info {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 18px;
+    }
+    button {
+      background: #b5121b;
+      color: white;
+      border: 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🇲🇰 Македонска Заедница</h1>
+    <p>Macedonian Community of Australia Inc.</p>
+    <p>Заедно сме посилни · Stronger Together</p>
+  </header>
+
+  <main>
+    <h2>Explore · Истражете</h2>
+    <div class="grid">
+      <div class="item" onclick="show('Business Listings','Find Macedonian-owned businesses and services.')"><span>🏪</span><strong>Business Listings</strong></div>
+      <div class="item" onclick="show('Community & Organisations','Discover Macedonian community groups and organisations.')"><span>🤝</span><strong>Community</strong></div>
+      <div class="item" onclick="show('Traditional Cooking','Explore Macedonian recipes and traditional dishes.')"><span>🍲</span><strong>Recipes · Рецепти</strong></div>
+      <div class="item" onclick="show('Events','Find community gatherings, festivals and celebrations.')"><span>🎉</span><strong>Events · Настани</strong></div>
+      <div class="item" onclick="show('Latest News','Macedonian and Australian news in English and Macedonian.')"><span>📰</span><strong>Latest News</strong></div>
+      <div class="item" onclick="show('Macedonian Radio','Macedonian radio streaming links can be added here.')"><span>📻</span><strong>Macedonian Radio</strong></div>
+      <div class="item" onclick="show('Tourism Macedonia','Discover places to visit in Macedonia.')"><span>🏔️</span><strong>Tourism Macedonia</strong></div>
+      <div class="item" onclick="show('Maso TV & Tera TV','Official TV streaming links can be added here.')"><span>📺</span><strong>Macedonian TV</strong></div>
+      <div class="item" onclick="show('Macedonian Weather','Weather links for cities across Macedonia can be added here.')"><span>🌤️</span><strong>Weather</strong></div>
+      <div class="item" onclick="show('Orthodox Calendar','Macedonian Orthodox calendar and feast days.')"><span>🕯️</span><strong>Orthodox Calendar</strong></div>
+    </div>
+
+    <section id="info">
+      <h2>Welcome · Добредојдовте!</h2>
+      <p>Connecting Macedonians across Australia with our language, culture, traditions and community.</p>
+      <p>Ги поврзуваме Македонците низ Австралија со нашиот јазик, култура и традиции.</p>
+    </section>
+  </main>
+
+  <footer>
+    Macedonian Community of Australia Inc.<br>
+    Culture · Community · Connection
+  </footer>
+
+  <script>
+    function show(title, message) {
+      document.getElementById('info').innerHTML =
+        '<h2>' + title + '</h2><p>' + message + '</p>' +
+        '<button onclick="home()">Back to Welcome</button>';
+      document.getElementById('info').scrollIntoView({behavior:'smooth'});
+    }
+    function home() {
+      document.getElementById('info').innerHTML =
+        '<h2>Welcome · Добредојдовте!</h2>' +
+        '<p>Connecting Macedonians across Australia with our language, culture, traditions and community.</p>' +
+        '<p>Ги поврзуваме Македонците низ Австралија со нашиот јазик, култура и традиции.</p>';
+    }
+  </script>
+</body>
+        </html>
